@@ -35,25 +35,21 @@ def list_folders() -> list[str]:
     return folders
 
 
-def list_files(folder_name: Optional[str] = None) -> list[str]:
+def list_files(folder_name: str) -> list[str]:
     """List all files in a given folder."""
 
     folder_path = os.path.join(env.STORAGE_PATH, folder_name)
 
-    if not os.path.exists(folder_path):
+    if not os.path.exists(folder_path) or not os.path.isdir(folder_path):
         return []
 
-    if not os.path.isdir(folder_path):
-        return [f"{folder_name} is not a directory."]
-
-    files = [f.name for f in os.scandir(folder_path) if f.is_file()]
-    return files
+    return [f"{folder_name}/{f.name}" for f in os.scandir(folder_path) if f.is_file()]
 
 
-def move_file(src_folder: str, dist_folder: str, file_name: str) -> str:
+def move_file(src_path: str, dist_folder: str) -> str:
     """Move a file from one folder to another."""
 
-    src_path = os.path.join(env.STORAGE_PATH, src_folder, file_name)
+    file_name = os.path.basename(src_path)
     dist_path = os.path.join(env.STORAGE_PATH, dist_folder, file_name)
 
     if not os.path.exists(src_path):
@@ -64,7 +60,7 @@ def move_file(src_folder: str, dist_folder: str, file_name: str) -> str:
 
     try:
         os.rename(src_path, dist_path)
-        return f"File {file_name} moved from {src_folder} to {dist_folder} successfully."
+        return f"File {file_name} moved to {dist_folder} successfully."
 
     except Exception as e:
         logger.error(f"Error moving file {file_name}: {e}")
@@ -84,3 +80,21 @@ def remove_file(file_path: str) -> str:
     except Exception as e:
         logger.error(f"Error removing file {file_path}: {e}")
         return f"Unknown error removing file {file_path}."
+
+
+def load_image_as_bytes(file_path: str) -> Optional[bytes]:
+    """Load an image file and return its content as bytes."""
+
+    file_path = os.path.join(env.STORAGE_PATH, file_path)
+
+    if not os.path.exists(file_path):
+        logger.error(f"File {file_path} does not exist.")
+        return None
+
+    try:
+        with open(file_path, "rb") as f:
+            return f.read()
+
+    except Exception as e:
+        logger.error(f"Error loading image {file_path}: {e}")
+        return None
