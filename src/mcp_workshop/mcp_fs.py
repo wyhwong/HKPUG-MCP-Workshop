@@ -4,7 +4,7 @@ from fastmcp import FastMCP
 from fastmcp.utilities.types import Image
 
 from mcp_workshop import env
-from mcp_workshop.utils.fs import (
+from mcp_workshop.fs.utils import (
     create_folder,
     list_files,
     list_folders,
@@ -18,7 +18,7 @@ if not os.path.exists(env.STORAGE_PATH):
 
 
 INSTRUCTIONS = """
-This server provides a simple interface to interact with file system and postgresDB.
+This server provides a simple interface to interact with file system.
 Call create_album() to create a new album.
 Call list_albums() to list all albums.
 Call list_images(album_name) to list all images in a specific album.
@@ -69,4 +69,4 @@ def add_image_to_album(album_name: str, filepath: str) -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="sse", port=env.MCP_PORT)
+    mcp.run(transport="sse", port=env.MCP_FS_PORT)
