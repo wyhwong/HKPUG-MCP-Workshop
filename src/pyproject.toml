@@ -1,5 +1,5 @@
 [project]
-name = "mcp-workshop"
+name = "mcp_workshop"
 version = "0.1.0"
 description = "Codebase for MCP Workshop of Hong Kong Python User Group"
 authors = [
