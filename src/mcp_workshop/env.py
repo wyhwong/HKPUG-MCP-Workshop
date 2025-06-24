@@ -1,9 +1,12 @@
 import os
 
 
-MCP_PORT = int(os.getenv("MCP_PORT", "8000"))
-STORAGE_PATH = os.getenv("STORAGE_PATH", "./storage")
+# For first MCP
+MCP_FS_PORT = int(os.getenv("MCP_FS_PORT", "8000"))
+STORAGE_PATH = os.getenv("STORAGE_PATH", "/tmp/storage")
 
+# For second MCP
+MCP_PG_PORT = int(os.getenv("MCP_PG_PORT", "8001"))
 POSTGRES_HOST = os.getenv("POSTGRES_HOST", "localhost")
 POSTGRES_PORT = int(os.getenv("POSTGRES_PORT", "5432"))
 POSTGRES_USERNAME = os.getenv("POSTGRES_USERNAME", "")

@@ -1,70 +1,201 @@
-annotated-types==0.7.0 ; python_version >= "3.11" and python_version < "4.0"
-anyio==4.9.0 ; python_version >= "3.11" and python_version < "4.0"
-appnope==0.1.4 ; python_version >= "3.11" and python_version < "4.0" and platform_system == "Darwin"
-asttokens==3.0.0 ; python_version >= "3.11" and python_version < "4.0"
-certifi==2025.4.26 ; python_version >= "3.11" and python_version < "4.0"
-cffi==1.17.1 ; python_version >= "3.11" and python_version < "4.0" and implementation_name == "pypy"
-click==8.2.1 ; python_version >= "3.11" and python_version < "4.0"
-colorama==0.4.6 ; python_version >= "3.11" and python_version < "4.0" and (sys_platform == "win32" or platform_system == "Windows")
-comm==0.2.2 ; python_version >= "3.11" and python_version < "4.0"
-debugpy==1.8.14 ; python_version >= "3.11" and python_version < "4.0"
-decorator==5.2.1 ; python_version >= "3.11" and python_version < "4.0"
-exceptiongroup==1.3.0 ; python_version >= "3.11" and python_version < "4.0"
-executing==2.2.0 ; python_version >= "3.11" and python_version < "4.0"
-fastapi==0.115.12 ; python_version >= "3.11" and python_version < "4.0"
-fastmcp==2.5.1 ; python_version >= "3.11" and python_version < "4.0"
-h11==0.16.0 ; python_version >= "3.11" and python_version < "4.0"
-httpcore==1.0.9 ; python_version >= "3.11" and python_version < "4.0"
-httpx-sse==0.4.0 ; python_version >= "3.11" and python_version < "4.0"
-httpx==0.28.1 ; python_version >= "3.11" and python_version < "4.0"
-idna==3.10 ; python_version >= "3.11" and python_version < "4.0"
-ipykernel==6.29.5 ; python_version >= "3.11" and python_version < "4.0"
-ipython-pygments-lexers==1.1.1 ; python_version >= "3.11" and python_version < "4.0"
-ipython==9.2.0 ; python_version >= "3.11" and python_version < "4.0"
-jedi==0.19.2 ; python_version >= "3.11" and python_version < "4.0"
-jupyter-client==8.6.3 ; python_version >= "3.11" and python_version < "4.0"
-jupyter-core==5.8.1 ; python_version >= "3.11" and python_version < "4.0"
-markdown-it-py==3.0.0 ; python_version >= "3.11" and python_version < "4.0"
-matplotlib-inline==0.1.7 ; python_version >= "3.11" and python_version < "4.0"
-mcp==1.9.1 ; python_version >= "3.11" and python_version < "4.0"
-mdurl==0.1.2 ; python_version >= "3.11" and python_version < "4.0"
-nest-asyncio==1.6.0 ; python_version >= "3.11" and python_version < "4.0"
-numpy==2.2.6 ; python_version >= "3.11" and python_version < "4.0"
-openapi-pydantic==0.5.1 ; python_version >= "3.11" and python_version < "4.0"
-packaging==25.0 ; python_version >= "3.11" and python_version < "4.0"
-pandas==2.2.3 ; python_version >= "3.11" and python_version < "4.0"
-parso==0.8.4 ; python_version >= "3.11" and python_version < "4.0"
-pexpect==4.9.0 ; python_version >= "3.11" and python_version < "4.0" and sys_platform != "win32" and sys_platform != "emscripten"
-platformdirs==4.3.8 ; python_version >= "3.11" and python_version < "4.0"
-prompt-toolkit==3.0.51 ; python_version >= "3.11" and python_version < "4.0"
-psutil==7.0.0 ; python_version >= "3.11" and python_version < "4.0"
-psycopg2-binary==2.9.10 ; python_version >= "3.11" and python_version < "4.0"
-ptyprocess==0.7.0 ; python_version >= "3.11" and python_version < "4.0" and sys_platform != "win32" and sys_platform != "emscripten"
-pure-eval==0.2.3 ; python_version >= "3.11" and python_version < "4.0"
-pycparser==2.22 ; python_version >= "3.11" and python_version < "4.0" and implementation_name == "pypy"
-pydantic-core==2.33.2 ; python_version >= "3.11" and python_version < "4.0"
-pydantic-settings==2.9.1 ; python_version >= "3.11" and python_version < "4.0"
-pydantic==2.11.5 ; python_version >= "3.11" and python_version < "4.0"
-pygments==2.19.1 ; python_version >= "3.11" and python_version < "4.0"
-python-dateutil==2.9.0.post0 ; python_version >= "3.11" and python_version < "4.0"
-python-dotenv==1.1.0 ; python_version >= "3.11" and python_version < "4.0"
-python-multipart==0.0.20 ; python_version >= "3.11" and python_version < "4.0"
-pytz==2025.2 ; python_version >= "3.11" and python_version < "4.0"
-pywin32==310 ; python_version >= "3.11" and python_version < "4.0" and sys_platform == "win32" and platform_python_implementation != "PyPy"
-pyzmq==26.4.0 ; python_version >= "3.11" and python_version < "4.0"
-rich==14.0.0 ; python_version >= "3.11" and python_version < "4.0"
-shellingham==1.5.4 ; python_version >= "3.11" and python_version < "4.0"
-six==1.17.0 ; python_version >= "3.11" and python_version < "4.0"
-sniffio==1.3.1 ; python_version >= "3.11" and python_version < "4.0"
-sse-starlette==2.3.5 ; python_version >= "3.11" and python_version < "4.0"
-stack-data==0.6.3 ; python_version >= "3.11" and python_version < "4.0"
-starlette==0.46.2 ; python_version >= "3.11" and python_version < "4.0"
-tornado==6.5.1 ; python_version >= "3.11" and python_version < "4.0"
-traitlets==5.14.3 ; python_version >= "3.11" and python_version < "4.0"
-typer==0.16.0 ; python_version >= "3.11" and python_version < "4.0"
-typing-extensions==4.13.2 ; python_version >= "3.11" and python_version < "4.0"
-typing-inspection==0.4.1 ; python_version >= "3.11" and python_version < "4.0"
-tzdata==2025.2 ; python_version >= "3.11" and python_version < "4.0"
-uvicorn==0.34.2 ; python_version >= "3.11" and python_version < "4.0" and sys_platform != "emscripten"
-wcwidth==0.2.13 ; python_version >= "3.11" and python_version < "4.0"
-websockets==15.0.1 ; python_version >= "3.11" and python_version < "4.0"
+# This file was autogenerated by uv via the following command:
+#    uv export --project src --no-hashes --format requirements-txt --output-file src/requirements.txt
+annotated-types==0.7.0
+    # via pydantic
+anyio==4.9.0
+    # via
+    #   httpx
+    #   mcp
+    #   sse-starlette
+    #   starlette
+appnope==0.1.4 ; sys_platform == 'darwin'
+    # via ipykernel
+asttokens==3.0.0
+    # via stack-data
+authlib==1.6.0
+    # via fastmcp
+certifi==2025.6.15
+    # via
+    #   httpcore
+    #   httpx
+cffi==1.17.1 ; implementation_name == 'pypy' or platform_python_implementation != 'PyPy'
+    # via
+    #   cryptography
+    #   pyzmq
+click==8.2.1
+    # via
+    #   typer
+    #   uvicorn
+colorama==0.4.6 ; sys_platform == 'win32'
+    # via
+    #   click
+    #   ipython
+comm==0.2.2
+    # via ipykernel
+cryptography==45.0.4
+    # via authlib
+debugpy==1.8.14
+    # via ipykernel
+decorator==5.2.1
+    # via ipython
+exceptiongroup==1.3.0
+    # via fastmcp
+executing==2.2.0
+    # via stack-data
+fastapi==0.115.13
+    # via mcp-workshop
+fastmcp==2.9.0
+    # via mcp-workshop
+h11==0.16.0
+    # via
+    #   httpcore
+    #   uvicorn
+httpcore==1.0.9
+    # via httpx
+httpx==0.28.1
+    # via
+    #   fastmcp
+    #   mcp
+httpx-sse==0.4.1
+    # via mcp
+idna==3.10
+    # via
+    #   anyio
+    #   httpx
+ipykernel==6.29.5
+    # via mcp-workshop
+ipython==9.3.0
+    # via ipykernel
+ipython-pygments-lexers==1.1.1
+    # via ipython
+jedi==0.19.2
+    # via ipython
+jupyter-client==8.6.3
+    # via ipykernel
+jupyter-core==5.8.1
+    # via
+    #   ipykernel
+    #   jupyter-client
+markdown-it-py==3.0.0
+    # via rich
+matplotlib-inline==0.1.7
+    # via
+    #   ipykernel
+    #   ipython
+mcp==1.9.4
+    # via fastmcp
+mdurl==0.1.2
+    # via markdown-it-py
+nest-asyncio==1.6.0
+    # via ipykernel
+numpy==2.3.1
+    # via pandas
+openapi-pydantic==0.5.1
+    # via fastmcp
+packaging==25.0
+    # via ipykernel
+pandas==2.3.0
+    # via mcp-workshop
+parso==0.8.4
+    # via jedi
+pexpect==4.9.0 ; sys_platform != 'emscripten' and sys_platform != 'win32'
+    # via ipython
+platformdirs==4.3.8
+    # via jupyter-core
+prompt-toolkit==3.0.51
+    # via ipython
+psutil==7.0.0
+    # via ipykernel
+psycopg2-binary==2.9.10
+    # via mcp-workshop
+ptyprocess==0.7.0 ; sys_platform != 'emscripten' and sys_platform != 'win32'
+    # via pexpect
+pure-eval==0.2.3
+    # via stack-data
+pycparser==2.22 ; implementation_name == 'pypy' or platform_python_implementation != 'PyPy'
+    # via cffi
+pydantic==2.11.7
+    # via
+    #   fastapi
+    #   mcp
+    #   openapi-pydantic
+    #   pydantic-settings
+pydantic-core==2.33.2
+    # via pydantic
+pydantic-settings==2.10.1
+    # via mcp
+pygments==2.19.2
+    # via
+    #   ipython
+    #   ipython-pygments-lexers
+    #   rich
+python-dateutil==2.9.0.post0
+    # via
+    #   jupyter-client
+    #   pandas
+python-dotenv==1.1.1
+    # via
+    #   fastmcp
+    #   pydantic-settings
+python-multipart==0.0.20
+    # via mcp
+pytz==2025.2
+    # via pandas
+pywin32==310 ; platform_python_implementation != 'PyPy' and sys_platform == 'win32'
+    # via jupyter-core
+pyzmq==27.0.0
+    # via
+    #   ipykernel
+    #   jupyter-client
+rich==14.0.0
+    # via
+    #   fastmcp
+    #   typer
+shellingham==1.5.4
+    # via typer
+six==1.17.0
+    # via python-dateutil
+sniffio==1.3.1
+    # via anyio
+sse-starlette==2.3.6
+    # via mcp
+stack-data==0.6.3
+    # via ipython
+starlette==0.46.2
+    # via
+    #   fastapi
+    #   mcp
+tornado==6.5.1
+    # via
+    #   ipykernel
+    #   jupyter-client
+traitlets==5.14.3
+    # via
+    #   comm
+    #   ipykernel
+    #   ipython
+    #   jupyter-client
+    #   jupyter-core
+    #   matplotlib-inline
+typer==0.16.0
+    # via fastmcp
+typing-extensions==4.14.0
+    # via
+    #   anyio
+    #   exceptiongroup
+    #   fastapi
+    #   ipython
+    #   pydantic
+    #   pydantic-core
+    #   typer
+    #   typing-inspection
+typing-inspection==0.4.1
+    # via
+    #   pydantic
+    #   pydantic-settings
+tzdata==2025.2
+    # via pandas
+uvicorn==0.34.3 ; sys_platform != 'emscripten'
+    # via mcp
+wcwidth==0.2.13
+    # via prompt-toolkit
