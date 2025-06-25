@@ -1,6 +1,8 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, String
 from sqlalchemy.engine import Engine
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
+
+from mcp_workshop.postgres.constants import TableName
 
 
 Base = declarative_base()
@@ -8,11 +10,10 @@ Base = declarative_base()
 
 class PhotoDescription(Base):
 
-    __tablename__ = "photo_description"
+    __tablename__ = TableName.PHOTO_DESCRIPTION
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    filepath = Column(String, nullable=False)
-    description = Column(String)
+    filepath = Column(String, primary_key=True, nullable=False)
+    description = Column(String, nullable=False)
 
 
 def create_tables(engine: Engine) -> None:

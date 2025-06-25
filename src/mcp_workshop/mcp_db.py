@@ -1,14 +1,20 @@
 from fastmcp import FastMCP
 from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 from mcp_workshop import env
 from mcp_workshop.postgres.schema import create_tables
-
-
-engine = create_engine(
-    f"postgresql://{env.POSTGRES_USERNAME}:{env.POSTGRES_PASSWORD}@{env.POSTGRES_HOST}:{env.POSTGRES_PORT}/{env.POSTGRES_DATABASE}"
+from mcp_workshop.postgres.utils import (
+    get_photo_description,
+    insert_photo_description_record,
+    load_all_photo_descriptions,
 )
-create_tables(engine)
+
+
+DB_URL = f"postgresql://{env.POSTGRES_USERNAME}:{env.POSTGRES_PASSWORD}@{env.POSTGRES_HOST}:{env.POSTGRES_PORT}/{env.POSTGRES_DATABASE}"
+ENGINE = create_engine(DB_URL)
+create_tables(ENGINE)
+SESSION_FACTORY = sessionmaker(bind=ENGINE)
 
 
 INSTRUCTIONS = """
@@ -29,21 +35,31 @@ mcp = FastMCP(
 def insert_photo_description(filepath: str, description: str) -> str:
     """Insert a photo description into the database."""
 
-    raise NotImplementedError()
+    status = insert_photo_description_record(SESSION_FACTORY, filepath, description)
+
+    if status is True:
+        return "Photo description inserted successfully."
+
+    return "Failed to insert photo description for unknown reason."
 
 
 @mcp.tool()
 def list_photo_descriptions() -> str:
     """List all photo descriptions in the database."""
 
-    raise NotImplementedError()
+    return str(load_all_photo_descriptions(SESSION_FACTORY))
 
 
 @mcp.tool()
 def get_photo_description(filepath: str) -> str:
     """Get a photo description by its ID."""
 
-    raise NotImplementedError()
+    description = get_photo_description(SESSION_FACTORY, filepath)
+
+    if description:
+        return description
+
+    return "No description found for the given file path."
 
 
 if __name__ == "__main__":

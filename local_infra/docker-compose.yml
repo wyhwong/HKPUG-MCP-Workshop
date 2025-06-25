@@ -4,7 +4,7 @@ x-env: &env
   MODEL_NAME: qwen3:8b
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: postgres
-  POSTGRES_DB: ollama_db
+  POSTGRES_DB: postgres
 
 x-restart-policy: &restart
   on-failure
