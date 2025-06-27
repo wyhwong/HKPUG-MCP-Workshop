@@ -22,7 +22,7 @@ Then, please follow [README.md](src/README.md) in the `src` directory to install
 
 ## Related Resources
 
-- Powerpoint Slides: TBC
+- Powerpoint Slides: [View on OneDrive](https://1drv.ms/p/c/7adfdf652c41fb6c/ET7jEKOYQVJFt5Ra0s6lJ70BYhRMwdbJ4KzTSwYwflVAJw)
 
 ## Author
 [@wyhwong](https://github.com/wyhwong)
