@@ -1,5 +1,6 @@
 import logging
 import os
+import shutil
 from typing import Optional
 
 from mcp_workshop import env
@@ -59,7 +60,9 @@ def move_file(src_path: str, dist_folder: str) -> str:
         return f"Destination folder {dist_folder} does not exist."
 
     try:
-        os.rename(src_path, dist_path)
+        # os.rename(src_path, dist_path)
+        # NOTE: we need to use shutil.move to handle cross-filesystem moves
+        shutil.move(src_path, dist_path)
         return f"File {file_name} moved to {dist_folder} successfully."
 
     except Exception as e:
