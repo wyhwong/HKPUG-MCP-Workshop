@@ -19,9 +19,9 @@ SESSION_FACTORY = sessionmaker(bind=ENGINE)
 
 INSTRUCTIONS = """
 This server provides a simple interface to interact with a PostgreSQL database.
-Call insert_photo_description(filepath, description) to insert a photo description into the database.
-Call list_photo_descriptions() to list all photo descriptions in the database.
-Call get_photo_description(filepath) to get a photo description by its file path.
+Call insert_photo_description_to_database(filepath, description) to insert a photo description into the database.
+Call list_photo_descriptions_in_database() to list all photo descriptions in the database.
+Call get_photo_description_from_database(filepath) to get a photo description by its file path.
 """
 
 ###############################################################################
