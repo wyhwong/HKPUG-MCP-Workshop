@@ -24,5 +24,7 @@ Then, please follow [README.md](src/README.md) in the `src` directory to install
 
 - Powerpoint Slides: [View on OneDrive](https://1drv.ms/p/c/7adfdf652c41fb6c/ET7jEKOYQVJFt5Ra0s6lJ70BTj7TfATkfR4qnSfUZeePzQ)
 
+For the slides, you may also find them in [slides_backup](slides_backup) directory.
+
 ## Author
 [@wyhwong](https://github.com/wyhwong)
